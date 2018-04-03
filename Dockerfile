@@ -7,4 +7,9 @@ WORKDIR /
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+COPY hello_tensorflow.py .
+
 EXPOSE $port
+
+CMD ["python", "hello_tensorflow.py"]
+
